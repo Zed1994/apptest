@@ -1,0 +1,10 @@
+.smartButton {
+  height: 32px;
+  padding: 0 8px;
+  background: #4781ff;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background: #2861de;
+  }
+}

@@ -1,0 +1,98 @@
+// 以下是列表部分样式变量
+//font
+$--font-10: 10px;
+$--font-12: 12px;
+$--font-13: 13px;
+$--font-14: 14px;
+$--font-16: 16px;
+$--font-18: 18px;
+$--font-24: 24px;
+
+// 新版UI颜色
+$--color-active: #4781ff;
+$--color-white: #fff; // 白色
+$--color-greey: #555; // 灰色
+$--color-font-default: #333; // 字体默认颜色
+$--color-left-module-a: #f7f8fa; // 首页左侧模块背景色皮肤1 ｜ 菜单li标签背景色
+$--color-new-message: #fa574b; // 新消息红点
+$--color-search-box-default: #f3f3f7; // 搜索框背景色
+$--color-svg-default: #83868f; // 默认svg颜色
+$--color-menu-bg-active: #42c479; // 菜单默认背景色
+$--color-menu-bg-hover: #e5f9ee; // 菜单hover背景色
+$--color-bg-active: #ebecf0; // 菜单hover状态背景色 | 左侧菜单hover
+$--color-btn-border: #e1e2e6; // 按钮边框
+$--color-btn-hover: #f0f1f5; // 按钮边框
+$--color-search-default: #f3f3f7;
+$--color-qgl-title: #323233; //页面title字体的颜色
+$--color-qgl-special-span: #e6a23c; //特殊的span字体颜色
+$--color-qgl-title-border: #24b366; //页面title标识
+$--color-qgl-block-background: #42c57a; //特殊模块背景色
+$--color-qgl-special-text: #999; //页面浅灰色字体
+$--color-qgl-tag-background: #ecf9f1; //标签背景色
+$--color-qgl-block-background-blue: #edf4ff; //特殊模块蓝色背景色
+$--color-qgl-block-text-blue: #5392ff; //特殊模块浅蓝色字体颜色
+$--color-qgl-common-tab-background: #d7d7d7;
+
+// uxc standerd
+$--btn-default: #42c57a;
+$--btn-hover: #51cc87;
+$--btn-white-boder: #e1e2e6;
+$--btn-white-boder-hover: #d7d7d7;
+$--font-color3: #333;
+$--label-color: #606266;
+
+$--user-bar-h: 50px;
+
+$-border-color: #efefef;
+
+$--resource-menu-background: #edf1f7;
+$--resource-menu-font-color: #758091;
+$--resource-hover-color: #2861de;
+$--resource-active-color: #4781ff;
+$--resource-fontColor333: #333;
+$--resource-fontColor666: #666;
+$--resource-fontColor999: #999;
+$--resource-border-color: #efefef;
+$--resource-btn-border-color-normal: #cacaca;
+$--resource-btn-font-color-disable: #aaa;
+
+$--color-primary: #4781ff;
+$--color-primary--hover: #2861DE;
+$--color-primary--active: #4781ff;
+
+$--font-size-normal: 15px;
+
+// 教师工作台
+$--btn-text-hover-bg-color: #F5F6FA;
+$--btn-primary-hover-bg-color: #356EEA;
+$--btn-primary-active-bg-color: #2861DE;
+$-btn-disable-bg-color: #CACACA;
+$-btn-default--hover: #2861DE;
+$-btn-default--active: #4781ff;
+$-btn-default--disable: #AAAAAA;
+$-btn-plain: #CACACA;
+$-btn-plain-text-color: #666666;
+$-btn-plain--hover:#4781FF;
+$-btn-plain--active:#2861DE;
+$-btn-warning: #FF4444;
+$-btn-warning--hover: #E21717;
+$-btn-warning--active: #FF4444;
+$-btn-icon-text: #666;
+$-btn-icon-text--hover: #4781ff;
+$-btn-icon-text--active: #2861DE;
+
+$-btn-radius: 3px;
+
+$font-path: '../font';
+
+// 图库
+$--font-size-normal: 15px;// 图库颜色
+$--tuku-font-color: #666;;
+$--tuku-label-color:#999;
+$--resource-active-font-color: #4781FF;
+
+// 卡片
+$--card-font-title: 14px;
+$--card-font-info: 12px;
+$--options--font-title: 22px;
+$--font-size-normal: 15px;

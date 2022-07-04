@@ -1,0 +1,122 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env ENV=development proxyTarget=base webpack serve",
+    "checkBuild": "vue-tsc --noEmit --skipLibCheck",
+    "build:file": "yarn checkBuild && cross-env USELOCAL=true webpack build",
+    "build": "yarn checkBuild && webpack build",
+    "build:online": "yarn build",
+    "build:test": "yarn build",
+    "format": "prettier --write ./src",
+    "lint": "eslint ./src --ext .vue,.js,.ts",
+    "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
+    "prepare": "husky install",
+    "pre-commit:lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "element-plus": "1.1.0-beta.8",
+    "qs": "^6.10.1",
+    "vue": "^3.2.9",
+    "vue-router": "^4.0.6",
+    "vuex": "^4.0.0",
+    "@zyb-data/stats-pc": "0.0.10",
+    "@zhike/driver.js": "^1.0.2",
+    "blueimp-md5": "^2.18.0",
+    "crypto-js": "^4.1.1",
+    "driver.js": "^0.9.8",
+    "jz-common": "^1.0.35",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.0",
+    "swiper": "7.0.9",
+    "vue-cli-plugin-zyb": "4.22.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/lodash": "^4.14.173",
+    "@types/node": "^16.7.10",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "@vue/compiler-sfc": "^3.2.8",
+    "@yzfe/svgicon": "^1.0.1",
+    "@yzfe/vue3-svgicon": "^1.0.1",
+    "@zyb/apm-webpack-plugin": "^1.0.9",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "sass": "^1.39.0",
+    "typescript": "^4.4.2",
+    "vue-tsc": "^0.3.0",
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/plugin-transform-typescript": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.17.2",
+    "@vue/babel-plugin-jsx": "^1.1.1",
+    "@vue/runtime-dom": "^3.2.30",
+    "amfe-flexible": "^2.2.1",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.6.0",
+    "dotenv-webpack": "^7.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^6.2.1",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^7.3.1",
+    "postcss-pxtorem": "^6.0.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^17.0.0",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpackbar": "^5.0.2",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "resolve-url-loader": "^5.0.0",
+    "source-map-loader": "^3.0.1"
+  },
+  "browserslist": {
+    "production": [
+      "chrome 67"
+    ],
+    "development": [
+      "chrome 67",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,tsx}": {
+      "0": "prettier --write",
+      "1": "eslint --cache --fix",
+      "2": "prettier --write",
+      "3": "eslint --cache --fix"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
+}

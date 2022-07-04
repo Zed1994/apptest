@@ -1,0 +1,22 @@
+stages:
+  - build
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+  - before_ci_script
+
+docker-build:
+  stage: build
+  script:
+    - docker_build_fe_script
+  after_script:
+    - after_ci_fe_script
+  tags:
+    - global-runner
+
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /^ci /
+      - $CI_COMMIT_REF_NAME == "master"

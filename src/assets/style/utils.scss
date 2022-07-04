@@ -1,0 +1,109 @@
+/**
+  通用样式
+*/
+// 登录框适配
+$rootFontSize: math.div(776, 10);
+@function px2rem($px) {
+  @return math.div($px, $rootFontSize) + rem;
+}
+
+// cursor + 不可选中文字
+%pointer {
+  user-select: none;
+  cursor: pointer;
+}
+
+// 图片按钮
+@mixin imgBtn($imgNormal, $imgHover, $imgClick) {
+  background-image: url($imgNormal);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  &:hover {
+    background-image: url($imgHover);
+  }
+  &:active {
+    background-image: url($imgClick);
+  }
+}
+// 文字按钮
+@mixin textBtn(
+  $colorNormal,
+  $colorHover,
+  $colorClick,
+  $bgNormal,
+  $bgHover,
+  $bgClick
+) {
+  color: $colorNormal;
+  background: $bgNormal;
+  &:hover {
+    color: $colorHover;
+    background: $bgHover;
+  }
+  &:active {
+    color: $colorClick;
+    background: $bgClick;
+  }
+}
+//带边框的按钮
+@mixin borderBtn($colorN, $colorH, $colorC) {
+  border: 1px solid;
+  border-color: $colorN;
+  &:hover {
+    border-color: $colorH;
+  }
+  &:active {
+    border-color: $colorC;
+  }
+}
+// 图片+文字按钮 按钮内部图片类名统一用btn-img,仅支持几个参数的属性，其他样式自定义
+@mixin imgTextBtn(
+  $colorNormal,
+  $colorHover,
+  $colorClick,
+  $bgNormal,
+  $bgHover,
+  $bgClick,
+  $imgNormal,
+  $imgHover,
+  $imgClick
+) {
+  .btn-img {
+    background-image: url($imgNormal);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &:hover {
+    .btn-img {
+      background-image: url($imgHover);
+    }
+  }
+  &:active {
+    .btn-img {
+      background-image: url($imgClick);
+    }
+  }
+  @include textBtn(
+    $colorNormal,
+    $colorHover,
+    $colorClick,
+    $bgNormal,
+    $bgHover,
+    $bgClick
+  );
+}
+
+.zIndexBig {
+  z-index: 1000;
+}
+.zIndexsmall {
+  z-index: -1;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+

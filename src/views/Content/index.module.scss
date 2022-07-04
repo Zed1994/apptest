@@ -1,0 +1,19 @@
+.content{
+  height: 100;
+  .menu{
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+      font-size: 16px;
+      padding: 8px 10px;
+    }
+    :global{
+      .router-link-active{
+        color: #4781ff;
+      }
+    }
+  }
+}
